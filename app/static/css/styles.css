@@ -12,6 +12,13 @@ body {
     cursor: url('/static/images/custom-cursor.png'), auto;
 }
 
+
+
+/* Use the custom pointer cursor for buttons specifically */
+a, button, .clickable {
+    cursor: url('/static/images/custom-pointer.png') 16 16, pointer;
+}
+
 .container {
     text-align: center;
     width: 100%;
