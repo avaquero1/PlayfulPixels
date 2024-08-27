@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayfulPixels - Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Display the Panda Mascot -->
+            <div class="mascot-container">
+                <img src="{{ url_for('static', filename='images/mascot.png') }}" alt="Pixel the Panda" class="mascot">
+                <div class="speech-bubble" id="speechBubble">Hello!</div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item" id="colors">
+                <img src="{{ url_for('static', filename='images/icons/colors.png') }}" alt="Colors">
+                <p>Colors</p>
+            </div>
+            <div class="grid-item" id="shapes">
+                <img src="{{ url_for('static', filename='images/icons/shapes.png') }}" alt="Shapes">
+                <p>Shapes</p>
+            </div>
+            <div class="grid-item" id="animals">
+                <img src="{{ url_for('static', filename='images/icons/animals.png') }}" alt="Animals">
+                <p>Animals</p>
+            </div>
+            <div class="grid-item" id="puzzles">
+                <img src="{{ url_for('static', filename='images/icons/puzzles.png') }}" alt="Puzzles">
+                <p>Puzzles</p>
+            </div>
+            <div class="grid-item" id="numbers">
+                <img src="{{ url_for('static', filename='images/icons/numbers.png') }}" alt="Numbers">
+                <p>Numbers</p>
+            </div>
+            <div class="grid-item" id="letters">
+                <img src="{{ url_for('static', filename='images/icons/letters.png') }}" alt="Letters">
+                <p>Letters</p>
+            </div>
+            <div class="grid-item" id="music">
+                <img src="{{ url_for('static', filename='images/icons/music.png') }}" alt="Music">
+                <p>Music</p>
+            </div>
+            <div class="grid-item" id="art">
+                <img src="{{ url_for('static', filename='images/icons/art.png') }}" alt="Art">
+                <p>Art</p>
+            </div>
+        </div>
+        <div class="home-button">
+            <img src="{{ url_for('static', filename='images/icons/home.png') }}" alt="Home">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
