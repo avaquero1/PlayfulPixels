@@ -12,12 +12,13 @@ body {
     cursor: url('/static/images/custom-cursor.png'), auto;
 }
 
+
+
 /* Use the custom pointer cursor for buttons specifically */
 a, button, .clickable {
     cursor: url('/static/images/custom-pointer.png') 16 16, pointer;
 }
 
-/* Container and Header Styles */
 .container {
     text-align: center;
     width: 100%;
@@ -35,6 +36,14 @@ a, button, .clickable {
     border-radius: 20px; /* Curved edges for the mascot */
 }
 
+
+
+
+
+
+
+
+
 /* Instrument Selection */
 .instrument-selection {
     position: absolute;
@@ -45,28 +54,46 @@ a, button, .clickable {
     gap: 20px;
 }
 
-.instrument-icon img {
+.instrument-icon {
     width: 50px; /* Reduced size */
     height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.instrument-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.instrument-icon.active {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Note Interface */
 .note-interface {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 100px; /* Adjust position to center */
 }
 
+.key-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px; /* Space between rows */
+}
+
 .key, .pad {
-    width: 100px;
-    height: 150px;
-    margin: 0 20px;
+    width: 60px;
+    height: 100px;
+    margin: 0 5px;
     background-color: #FFF;
     border: 2px solid #000;
     border-radius: 10px;
     text-align: center;
-    line-height: 150px;
-    font-size: 32px;
+    line-height: 100px;
+    font-size: 24px;
     cursor: pointer;
     transition: transform 0.1s ease, background-color 0.1s ease;
 }
@@ -80,7 +107,24 @@ a, button, .clickable {
     background-color: #ccc;
 }
 
-/* Game Link Styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .game-link {
     text-decoration: none;
     color: inherit;
@@ -108,7 +152,9 @@ a, button, .clickable {
     transform: scale(1.1);
 }
 
-/* Grid Layout for Other Elements */
+
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -148,7 +194,6 @@ a, button, .clickable {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Home Button */
 .home-button {
     position: fixed;
     bottom: 20px;
@@ -162,13 +207,11 @@ a, button, .clickable {
     animation: pulse 2s infinite;
 }
 
-/* Mascot Container */
 .mascot-container {
     position: relative;
     display: inline-block;
 }
 
-/* Speech Bubble */
 .speech-bubble {
     position: absolute;
     top: -10px; /* Adjusted to move above the mascot */
@@ -197,7 +240,8 @@ a, button, .clickable {
     border-color: transparent #FFF transparent transparent;
 }
 
-/* Pulse Animation */
+
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }

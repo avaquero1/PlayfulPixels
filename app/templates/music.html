@@ -10,11 +10,11 @@
 
     <!-- Instrument Selection Section -->
     <div class="instrument-selection">
-        <div class="instrument-icon piano-icon" id="piano" data-instrument="piano">
+        <div class="instrument-icon" id="piano" data-instrument="piano">
             <img src="/static/images/icons/piano-icon.png" alt="Piano">
             <audio id="piano-sound" src="/static/sounds/piano-preview.mp3"></audio>
         </div>
-        <div class="instrument-icon drum-icon" id="drums" data-instrument="drums">
+        <div class="instrument-icon" id="drums" data-instrument="drums">
             <img src="/static/images/icons/drum-icon.png" alt="Drums">
             <audio id="drum-sound" src="/static/sounds/drum-preview.mp3"></audio>
         </div>
@@ -22,15 +22,38 @@
 
     <!-- Key/Pad Section for Playing Notes -->
     <div class="note-interface" id="piano-keys">
-        <div class="key" data-key="a">A</div>
-        <div class="key" data-key="s">S</div>
-        <div class="key" data-key="d">D</div>
-    </div>
-
-    <div class="note-interface hidden" id="drum-pads">
-        <div class="pad" data-key="a">A</div>
-        <div class="pad" data-key="s">S</div>
-        <div class="pad" data-key="d">D</div>
+        <div class="key-row">
+            <div class="key" data-key="q">Q</div>
+            <div class="key" data-key="w">W</div>
+            <div class="key" data-key="e">E</div>
+            <div class="key" data-key="r">R</div>
+            <div class="key" data-key="t">T</div>
+            <div class="key" data-key="y">Y</div>
+            <div class="key" data-key="u">U</div>
+            <div class="key" data-key="i">I</div>
+            <div class="key" data-key="o">O</div>
+            <div class="key" data-key="p">P</div>
+        </div>
+        <div class="key-row">
+            <div class="key" data-key="a">A</div>
+            <div class="key" data-key="s">S</div>
+            <div class="key" data-key="d">D</div>
+            <div class="key" data-key="f">F</div>
+            <div class="key" data-key="g">G</div>
+            <div class="key" data-key="h">H</div>
+            <div class="key" data-key="j">J</div>
+            <div class="key" data-key="k">K</div>
+            <div class="key" data-key="l">L</div>
+        </div>
+        <div class="key-row">
+            <div class="key" data-key="z">Z</div>
+            <div class="key" data-key="x">X</div>
+            <div class="key" data-key="c">C</div>
+            <div class="key" data-key="v">V</div>
+            <div class="key" data-key="b">B</div>
+            <div class="key" data-key="n">N</div>
+            <div class="key" data-key="m">M</div>
+        </div>
     </div>
 
     <script src="/static/js/scripts.js"></script>
