@@ -12,13 +12,12 @@ body {
     cursor: url('/static/images/custom-cursor.png'), auto;
 }
 
-
-
 /* Use the custom pointer cursor for buttons specifically */
 a, button, .clickable {
     cursor: url('/static/images/custom-pointer.png') 16 16, pointer;
 }
 
+/* Container and Header Styles */
 .container {
     text-align: center;
     width: 100%;
@@ -36,6 +35,80 @@ a, button, .clickable {
     border-radius: 20px; /* Curved edges for the mascot */
 }
 
+/* Instrument Selection */
+.instrument-selection {
+    position: absolute;
+    top: 20px; /* Place near the top */
+    right: 20px; /* Align to the right */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 20px;
+}
+
+.instrument-icon img {
+    width: 50px; /* Reduced size */
+    height: 50px;
+}
+
+/* Note Interface */
+.note-interface {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* Adjust position to center */
+}
+
+.key, .pad {
+    width: 100px;
+    height: 150px;
+    margin: 0 20px;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.key:hover, .pad:hover {
+    background-color: #e0e0e0;
+}
+
+.key:active, .pad:active {
+    transform: scale(0.95);
+    background-color: #ccc;
+}
+
+/* Game Link Styles */
+.game-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.game-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.game-icon span {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Grid Layout for Other Elements */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -75,6 +148,7 @@ a, button, .clickable {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Home Button */
 .home-button {
     position: fixed;
     bottom: 20px;
@@ -88,11 +162,13 @@ a, button, .clickable {
     animation: pulse 2s infinite;
 }
 
+/* Mascot Container */
 .mascot-container {
     position: relative;
     display: inline-block;
 }
 
+/* Speech Bubble */
 .speech-bubble {
     position: absolute;
     top: -10px; /* Adjusted to move above the mascot */
@@ -121,8 +197,7 @@ a, button, .clickable {
     border-color: transparent #FFF transparent transparent;
 }
 
-
-
+/* Pulse Animation */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }

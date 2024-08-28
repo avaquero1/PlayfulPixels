@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayfulPixels - Music and Rhythm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Instrument Selection Section -->
+    <div class="instrument-selection">
+        <div class="instrument-icon piano-icon" id="piano" data-instrument="piano">
+            <img src="/static/images/icons/piano-icon.png" alt="Piano">
+            <audio id="piano-sound" src="/static/sounds/piano-preview.mp3"></audio>
+        </div>
+        <div class="instrument-icon drum-icon" id="drums" data-instrument="drums">
+            <img src="/static/images/icons/drum-icon.png" alt="Drums">
+            <audio id="drum-sound" src="/static/sounds/drum-preview.mp3"></audio>
+        </div>
+    </div>
+
+    <!-- Key/Pad Section for Playing Notes -->
+    <div class="note-interface" id="piano-keys">
+        <div class="key" data-key="a">A</div>
+        <div class="key" data-key="s">S</div>
+        <div class="key" data-key="d">D</div>
+    </div>
+
+    <div class="note-interface hidden" id="drum-pads">
+        <div class="pad" data-key="a">A</div>
+        <div class="pad" data-key="s">S</div>
+        <div class="pad" data-key="d">D</div>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
