@@ -60,9 +60,11 @@
                 <p>Art</p>
             </div>
         </div>
-        <div class="home-button">
-            <img src="{{ url_for('static', filename='images/icons/home.png') }}" alt="Home">
-        </div>
+        <a href="/">
+            <div class="home-button">
+                <img src="{{ url_for('static', filename='images/icons/home.png') }}" alt="Home">
+            </div>
+            </a>
     </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
