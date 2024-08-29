@@ -35,7 +35,9 @@ window.onload = function() {
                     const clickableElements = node.matches('a, button, .clickable') ? [node] : [];
                     const descendants = node.querySelectorAll ? Array.from(node.querySelectorAll('a, button, .clickable')) : [];
                     [...clickableElements, ...descendants].forEach(clickable => {
-                        clickable.style.cursor = "url('/static/images/custom-pointer.png') 16 16, pointer";
+                        if (clickable.style.cursor !== "url('/static/images/custom-pointer.png') 16 16, pointer") {
+                            clickable.style.cursor = "url('/static/images/custom-pointer.png') 16 16, pointer";
+                        }
                     });
                 }
             });
@@ -49,7 +51,8 @@ window.onload = function() {
 // Function to apply the custom cursor to all clickable elements
 function applyCustomCursors() {
     // Apply custom cursor globally
-    document.body.style.cursor = "url('/static/images/custom-cursor.png') 16 16, default";
+    document.body.style.cursor = "url('/static/images/custom-cursor.png') 16 16, auto";
+
 
     // Apply custom pointer cursor to clickable elements
     document.querySelectorAll('a, button, .clickable').forEach(element => {
